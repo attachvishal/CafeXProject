@@ -1,4 +1,4 @@
-package com.cafex.scala.models
+package com.cafex.scala
 
 sealed trait FoodType
 
