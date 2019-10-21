@@ -23,7 +23,6 @@ class CafeXTestSpec extends WordSpec with Matchers {
     // InValid Order Item Test
     "returns only for valid Order Item" when {
 
-
       "invalid second Order is ordered" in {
         CafeXApp.tableOrder(Seq("Cola","Coffe2")) shouldBe 0.50
       }
@@ -36,6 +35,7 @@ class CafeXTestSpec extends WordSpec with Matchers {
 
     // Positive test cases
     "returns no service change for valid Drinks  Order Item" when {
+
       "Drinks Order is ordered" in {
         CafeXApp.tableOrder(Seq("Cola")) shouldBe 0.50
       }
@@ -47,6 +47,7 @@ class CafeXTestSpec extends WordSpec with Matchers {
 
      // Positive Service Charge order
     "returns service change for valid Drink and Sandwich  Order Item" when {
+
       "Drink and cold sandwhich Order is ordered" in {
         CafeXApp.tableOrder(Seq("Cola", "Cheese Sandwich")) shouldBe 2.75
       }
@@ -57,6 +58,7 @@ class CafeXTestSpec extends WordSpec with Matchers {
     }
 
     "returns service change for single/multiple Sandwichs Order Item" when {
+
       "Both Cold and Hot Sandwhich Food is ordered" in {
         CafeXApp.tableOrder(Seq("Cheese Sandwich","Steak Sandwich")) shouldBe 7.80
       }
